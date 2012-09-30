@@ -1,7 +1,7 @@
 Summary:	Perl-Compatible Regular Expression library
 Name:		pcre
 Version:	8.31
-Release:	1
+Release:	2
 License:	BSD (see LICENCE)
 Group:		Libraries
 Source0:	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/%{name}-%{version}.tar.bz2
@@ -44,20 +44,20 @@ Requires:	%{name}-devel = %{version}-%{release}
 %description cxx-devel
 Header file for C++ wrapper to PCRE library.
 
-%package -n pcregrep
+%package grep
 Summary:	Grep using Perl Compatible Regular Expressions
 Group:		Applications/Text
 Obsoletes:	pgrep
 
-%description -n pcregrep
+%description grep
 pgrep is a grep workalike which uses perl-style regular expressions
 instead of POSIX regular expressions.
 
-%package -n pcretest
+%package test
 Summary:	A program for testing Perl-comaptible regular expressions
 Group:		Applications/Text
 
-%description -n pcretest
+%description test
 pcretest is a program which you can use to test regular expression
 
 %package doc-html
@@ -95,11 +95,11 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/pcre
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post   -p /usr/sbin/ldconfig
+%postun -p /usr/sbin/ldconfig
 
-%post   cxx -p /sbin/ldconfig
-%postun cxx -p /sbin/ldconfig
+%post   cxx -p /usr/sbin/ldconfig
+%postun cxx -p /usr/sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
@@ -145,12 +145,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/pcrecpp.3*
 %{_pkgconfigdir}/libpcrecpp.pc
 
-%files -n pcregrep
+%files grep
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/pcregrep
 %{_mandir}/man1/pcregrep.1*
 
-%files -n pcretest
+%files test
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/pcretest
 %{_mandir}/man1/pcretest.1*
