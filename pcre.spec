@@ -1,11 +1,11 @@
 Summary:	Perl-Compatible Regular Expression library
 Name:		pcre
-Version:	8.34
+Version:	8.35
 Release:	1
 License:	BSD (see LICENCE)
 Group:		Libraries
 Source0:	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/%{name}-%{version}.tar.bz2
-# Source0-md5:	5439e321351bddd5533551bbce128d07
+# Source0-md5:	6aacb23986adccd9b3bc626c00979958
 URL:		http://www.pcre.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
