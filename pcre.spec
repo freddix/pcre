@@ -1,7 +1,7 @@
 Summary:	Perl-Compatible Regular Expression library
 Name:		pcre
 Version:	8.35
-Release:	2
+Release:	3
 License:	BSD (see LICENCE)
 Group:		Libraries
 Source0:	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/%{name}-%{version}.tar.bz2
